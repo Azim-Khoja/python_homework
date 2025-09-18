@@ -37,7 +37,6 @@ print(rev_txt)
 
 # 6. Count Vowels
 # Write a Python program that counts the number of vowels in a given string.
-
 txt = input('Matn kiriting: ')
 vowels = "AaOoUuEeIi"
 count = 0
@@ -45,6 +44,29 @@ for i in txt:
     if i in vowels:
         count += 1
 print("Matnda {}ta unli harf bor".format(count))
+# ========================================================================================================
+
+# 7. Find Maximum Value
+# Write a Python program that takes a list of numbers as input and prints the maximum value.
+sonlar = []
+n = int(input("Nechta son kiritmoqchisiz?:"))
+for i in range(n):
+    son = int(input(f"{i+1}-sonni kiriting:"))
+    sonlar.append(son)
+print(f"Siz kiritgan eng katta son: ", max(sonlar))
+# ========================================================================================================
+
+# 8. Check Palindrome
+# Write a Python program that checks if a given word is a palindrome (reads the same forward and backward).
+text = input("Matn kiriting:")
+palindrome = text[::-1]
+if text == palindrome:
+    print("Siz kiritgan matn Palindrom")
+else:
+    print("Siz kiritgan matn Palindrom emas")
+
+
+
 
 
 
