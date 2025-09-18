@@ -12,7 +12,6 @@ txt = 'LMaasleitbtui'
 print(txt[0::2])
 print(txt[1::2])
 
-
 # 3. Extract Car Names.
 # Extract car names from the following text:
 txt = 'MsaatmiazD'
@@ -51,7 +50,7 @@ print("Matnda {}ta unli harf bor".format(count))
 sonlar = []
 n = int(input("Nechta son kiritmoqchisiz?:"))
 for i in range(n):
-    son = int(input(f"{i+1}-sonni kiriting:"))
+    son = int(input(f"{i + 1}-sonni kiriting:"))
     sonlar.append(son)
 print(f"Siz kiritgan eng katta son: ", max(sonlar))
 # ========================================================================================================
@@ -64,18 +63,33 @@ if text == palindrome:
     print("Siz kiritgan matn Palindrom")
 else:
     print("Siz kiritgan matn Palindrom emas")
+# ========================================================================================================
 
+# 9. Extract Email Domain
+# Write a Python program that extracts and prints the domain from an email address provided by the user.
+email = input("Elektron pochta manzilingizni kiriting:")
+domain = email.split("@")[-1]
+print(f'Sizning elektron pochtangiz "{domain}" domenda ochilgan')
+# ========================================================================================================
 
+# 10. Generate Random Password
+# Write a Python program to generate a random password containing letters, digits, and special characters.
+import random
+import string
+def generate_password(length):
+    letters = string.ascii_letters
+    digits = string.digits
+    special = string.punctuation
+    all_chars = letters + digits + special
 
+    password = [
+        random.choice(letters),
+        random.choice(digits),
+        random.choice(special)
+    ]
+    password += [random.choice(all_chars) for _ in range(length - 3)]
+    random.shuffle(password)
+    return "".join(password)
 
-
-
-
-
-
-
-
-
-
-
+print("Generated password:", generate_password(12))
 
